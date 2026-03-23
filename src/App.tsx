@@ -2,6 +2,7 @@ import { useTheme } from './hooks/useThemes'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import About from './sections/About'
+import Contact from './sections/Contact'
 
 function App() {
   const { darkMode, toggleTheme } = useTheme()
@@ -11,6 +12,7 @@ function App() {
       <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       <main className="flex-1">
         <About/>
+        <Contact/>
       </main>
       <Footer />
     </div>

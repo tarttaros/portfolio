@@ -29,7 +29,7 @@ export default function Navbar({ darkMode, toggleTheme }: NavbarProps) {
           href="#about"
           className="font-mono font-bold text-lg text-gray-900 dark:text-white tracking-tight"
         >
-          joshua<span className="text-emerald-500">.</span>dev
+          joshua<span className="text-purple-500">.</span>dev
         </a>
 
         {/* Desktop links */}
