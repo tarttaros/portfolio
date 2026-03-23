@@ -1,75 +1,137 @@
-# React + TypeScript + Vite
+# 🚀 Joshua A. — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Frontend Developer Junior especializado en React & TypeScript, con visión fullstack.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Deploy](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Vista previa
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+<!-- Reemplaza con un screenshot real de tu portafolio -->
+![Portfolio Preview](./public/projects/preview.png)
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 📋 Secciones
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Sobre mí** — presentación, bio y stack tecnológico
+- **Proyectos** — proyectos destacados con links a demo y código
+- **Contacto** — formulario funcional + links a redes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Categoría | Tecnología |
+|-----------|-----------|
+| Framework | React 19 |
+| Lenguaje | TypeScript 5.9 |
+| Estilos | Tailwind CSS v3 |
+| Bundler | Vite 8 |
+| Formularios | React Hook Form |
+| Íconos | Heroicons |
+| Deploy | Vercel |
+
+---
+
+## 🚀 Correr en local
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/TU_USUARIO/portfolio.git
+cd portfolio
+
+# Instalar dependencias
+npm install
+
+# Levantar servidor de desarrollo
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estructura del proyecto
+
 ```
+src/
+├── components/
+│   ├── Navbar.tsx        # Navegación + toggle dark/light
+│   ├── ProjectCard.tsx   # Card reutilizable de proyecto
+│   └── Footer.tsx
+├── sections/
+│   ├── About.tsx         # Hero + bio + skills
+│   ├── Projects.tsx      # Grid de proyectos
+│   └── Contact.tsx       # Formulario de contacto
+├── data/
+│   ├── projects.ts       # ← edita aquí tus proyectos
+│   └── skills.ts         # ← edita aquí tus tecnologías
+├── hooks/
+│   └── useTheme.ts       # Dark/light mode con localStorage
+├── types/
+│   └── index.ts          # Interfaces TypeScript
+└── App.tsx
+```
+
+---
+
+## ✏️ Agregar proyectos
+
+Edita `src/data/projects.ts`:
+
+```ts
+{
+  id: 4,
+  title: 'Nombre del proyecto',
+  description: 'Qué hace y qué problema resuelve.',
+  stack: ['React', 'TypeScript', 'Docker'],
+  github: 'https://github.com/TU_USUARIO/repo',
+  demo: 'https://tu-proyecto.vercel.app',
+  image: '/projects/preview.png',
+  featured: true,
+}
+```
+
+Coloca los screenshots en `public/projects/`.
+
+---
+
+## 📬 Configurar formulario de contacto
+
+El formulario usa [EmailJS](https://emailjs.com) — sin backend necesario.
+
+1. Crea una cuenta en emailjs.com
+2. Crea un servicio y una plantilla de email
+3. En `src/sections/Contact.tsx`, reemplaza:
+
+```ts
+await emailjs.send('SERVICE_ID', 'TEMPLATE_ID', data, 'PUBLIC_KEY')
+```
+
+---
+
+## 🌐 Deploy
+
+El proyecto está configurado para deploy automático en Vercel.
+
+```bash
+# Build de producción
+npm run build
+
+# Verificar tipos
+npm run type-check
+```
+
+Conecta el repositorio en [vercel.com](https://vercel.com) y cada push a `main` hace deploy automático.
+
+---
+
+## 📄 Licencia
+
+MIT © [Joshua A.](https://github.com/TU_USUARIO)
