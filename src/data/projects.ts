@@ -9,7 +9,7 @@ export const projects: Project[] = [
     stack: ['React', 'TypeScript', 'CSS'],
     github: 'https://github.com/tarttaros/pokedex',
     demo: 'https://pokedexv.netlify.app/',
-    image: '/public/projects/pokedex.png',
+    image: '/projects/pokedex.png',
     featured: true,
   },
   /*
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     stack: ['HTML', 'CSS'],
     github: 'https://github.com/tarttaros/twitter_Clon',
     demo: null,
-    image: '/public/projects/twitter_clone.png',
+    image: '/projects/twitter_clone.png',
     featured: false,
   },
 ]

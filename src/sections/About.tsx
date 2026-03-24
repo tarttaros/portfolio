@@ -35,7 +35,7 @@ export default function About() {
             Ver proyectos
           </a>
           <a
-            href="/cv-joshua.pdf"
+            href="/Joshua_Osorio_Resume_ESP.pdf"
             download
             className="px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-purple-500 dark:hover:border-purple-500 font-semibold rounded-lg transition-colors"
           >
