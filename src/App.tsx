@@ -2,7 +2,7 @@ import { useTheme } from './hooks/useThemes'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import About from './sections/About'
-import Contact from './sections/Contact'
+/*import Contact from './sections/Contact'*/
 import Projects from './sections/Projects'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <main className="flex-1">
         <About/>
         <Projects/>
-        <Contact/>
+        {/*<Contact/>*/}
       </main>
       <Footer />
     </div>
